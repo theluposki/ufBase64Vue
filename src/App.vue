@@ -15,8 +15,8 @@ const user = computed(() => storeUser.user)
 
 <template>
   <HeaderM />
-  <MainM v-if="!user.nickname"/>
-  <MainLogged v-if="user.nickname"/> 
+  <MainM v-if="user.nickname"/>
+  <MainLogged v-if="!user.nickname"/> 
   <FooterM />
 </template>
 
