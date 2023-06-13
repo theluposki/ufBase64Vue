@@ -1,61 +1,38 @@
+<script setup>
+import { computed } from 'vue'
+import { useLayoutStore } from '../../stores/layout.js'
+
+const storeLayout = useLayoutStore()
+
+const activeMenu = computed(() => storeLayout.activeMenu)
+
+import MenuMobile from './MenuMobile.vue'
+import BtnMenu from './BtnMenu.vue'
+
+</script>
+
 <template>
-  <div
-    class="main"
-    ref="pageRef"
-    @touchstart.stop="onTouchStart"
-    @touchmove.stop="onTouchMove"
-    @touchend.stop="onTouchEnd"
-  >
-    <MenuMobile :class="{ 'menu-open': menuOpen }" />
+  <div class="main">
+    <BtnMenu />
+    <transition 
+    enter-active-class="animate__animated animate__slideInLeft"
+      leave-active-class="animate__animated animate__slideOutLeft"
+      mode="out-in">
+      <MenuMobile v-if="activeMenu"/>
+    </transition>
     <router-view></router-view>
   </div>
 </template>
 
-<script setup>
-import { ref } from "vue";
-import MenuMobile from './MenuMobile.vue'
-
-const menuOpen = ref(true);
-const posicaoInicial = ref(0);
-const deslocamentoMinimo = 75;
-const pageRef = ref(null);
-
-const onTouchStart = (event) => {
-  console.log("touch start");
-  posicaoInicial.value = event.touches[0].clientX;
-};
-
-const onTouchMove = (event) => {
-  console.log("touch move");
-  const deslocamentoX = event.touches[0].clientX - posicaoInicial.value;
-
-  if (deslocamentoX < -deslocamentoMinimo) {
-    menuOpen.value = true;
-  } else if (deslocamentoX > deslocamentoMinimo) {
-    menuOpen.value = false;
-  }
-};
-
-const onTouchEnd = () => {
-  console.log("touch end");
-  posicaoInicial.value = 0;
-};
-
-// Fechar o menu ao clicar fora dele
-window.addEventListener("click", (event) => {
-  if (menuOpen.value && !pageRef.value.contains(event.target)) {
-    menuOpen.value = false;
-  }
-});
-</script>
 
 <style scoped>
+.animate__animated.animate__slideInLeft {
+  --animate-duration: 0.5s;
+}
+.animate__animated.animate__slideOutLeft {
+  --animate-duration: 0.5s;
+}
 .main {
   position: relative;
-}
-
-
-.menu-open {
-  transform: translateX(-100vw);
 }
 </style>
