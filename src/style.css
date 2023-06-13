@@ -1,0 +1,90 @@
+@import url("https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  --white: hsl(0, 0%, 100%);
+  --white2: hsl(0, 0%, 87.5%);
+
+  --dark: hsl(0, 0%, 14.1%);
+  --dark2: hsl(0, 0%, 16.3%);
+  --blue-l: hsl(189.1, 85.7%, 69.8%);
+
+  font-size: 65.2%;
+  color: var(--dark);
+  background-color: var(--white2);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  font-size: 1.6rem;
+}
+
+#app {
+  position: relative;
+  width: 100%;
+  max-width: 1048px;
+  min-height: 100vh;
+
+  margin: 0 auto;
+  padding: 0;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--blue-l);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.page {
+  position: relative;
+  min-height: calc(100vh - 74.4px);
+  max-height: calc(100vh - 74.4px);
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: var(--white);
+  color: var(--dark);
+}
+
+.page-int {
+  min-height: calc(100vh - 74.4px - 60px);
+  max-height: calc(100vh - 74.4px - 60px);
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: var(--white);
+  color: var(--dark);
+}
