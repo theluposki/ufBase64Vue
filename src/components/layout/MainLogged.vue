@@ -17,7 +17,7 @@ import MenuMobile from './MenuMobile.vue'
 
 const menuOpen = ref(true);
 const posicaoInicial = ref(0);
-const deslocamentoMinimo = 300;
+const deslocamentoMinimo = 75;
 const pageRef = ref(null);
 
 const onTouchStart = (event) => {
