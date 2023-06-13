@@ -17,7 +17,7 @@ import { ref } from 'vue';
 
 const menuOpen = ref(true);
 const posicaoInicial = ref(0);
-const deslocamentoMinimo = 150;
+const deslocamentoMinimo = 50;
 const pageRef = ref(null);
 
 const onTouchStart = (event) => {
