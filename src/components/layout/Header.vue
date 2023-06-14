@@ -1,7 +1,10 @@
-<script setup></script>
+<script setup>
+import Logo from './Logo.vue'
+
+</script>
 <template>
   <div class="header">
-    header
+    <Logo />
   </div>
 </template>
 

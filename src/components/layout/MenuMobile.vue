@@ -1,11 +1,24 @@
 <script setup>
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import { useLayoutStore } from '../../stores/layout.js'
+import { useRouter } from "vue-router";
+
 const storeLayout = useLayoutStore()
+const { push, currentRoute } = useRouter();
 
 const activeMenu = computed(() => storeLayout.activeMenu)
 
 const fnActiveMenu = () => storeLayout.fnActiveMenu()
+
+const pathname = computed(() => currentRoute.value.fullPath);
+
+const setLink = (link) => {
+  push(link);
+  //storeLayout.fnActiveMenu()
+}
+
+
+
 </script>
 
 <template>
@@ -13,7 +26,15 @@ const fnActiveMenu = () => storeLayout.fnActiveMenu()
     <div class="btn-closed" v-if="activeMenu" @click="fnActiveMenu">
       <i class='bx bx-chevron-left' ></i>
     </div>
-    Menu
+    
+    <ul class="nav">
+      <li @click="setLink('/')" :class="pathname === '/' ? 'nav-link active' :'nav-link'">
+        Home
+      </li>
+      <li @click="setLink('/about')" :class="pathname === '/about' ? 'nav-link active' :'nav-link'">
+        About
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -27,7 +48,7 @@ const fnActiveMenu = () => storeLayout.fnActiveMenu()
   border-radius: 0 6px 6px 0;
   color: var(--white);
 
-  width: 300px;
+  width: 200px;
   height: calc(100vh - 78px);
 }
 
@@ -51,4 +72,38 @@ const fnActiveMenu = () => storeLayout.fnActiveMenu()
   font-size: 2.5rem;
   transition: all ease 2s;
 }
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+}
+
+.nav-link {
+  min-height: 50px;
+  max-height: 50px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  background-color: var(--dark2);
+  padding: 0 12px;
+  cursor: pointer;
+  border: solid 6px transparent;
+  border-radius: 8px;
+}
+
+.nav-link:hover {
+  transition: all ease .4s;
+  border-right: solid 6px var(--blue-l);
+}
+
+.active {
+  background-color: var(--blue-l);
+  color: var(--dark);
+  font-weight: 700;
+}
+
 </style>
