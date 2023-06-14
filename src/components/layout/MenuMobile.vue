@@ -1,7 +1,6 @@
 <script setup>
 import { computed } from 'vue'
 import { useLayoutStore } from '../../stores/layout.js'
-
 const storeLayout = useLayoutStore()
 
 const activeMenu = computed(() => storeLayout.activeMenu)
@@ -11,6 +10,9 @@ const fnActiveMenu = () => storeLayout.fnActiveMenu()
 
 <template>
   <div class="menu-container">
+    <div class="btn-closed" v-if="activeMenu" @click="fnActiveMenu">
+      <i class='bx bx-chevron-left' ></i>
+    </div>
     Menu
   </div>
 </template>
@@ -26,6 +28,27 @@ const fnActiveMenu = () => storeLayout.fnActiveMenu()
   color: var(--white);
 
   width: 300px;
-  height: 100px;
+  height: calc(100vh - 78px);
+}
+
+.btn-closed {
+  position: absolute;
+  top: 0;
+  right: 0;
+  
+  background-color: transparent;
+  color: var(--white);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 20px;
+  height: calc(100vh - 78px);
+
+  border-radius: 0 12px 12px 0;
+  cursor: pointer;
+  font-size: 2.5rem;
+  transition: all ease 2s;
 }
 </style>

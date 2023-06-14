@@ -4,24 +4,23 @@ import { useLayoutStore } from '../../stores/layout.js'
 
 const storeLayout = useLayoutStore()
 
-const activeMenu = computed(() => storeLayout.activeMenu)
+const activeMenuConversation = computed(() => storeLayout.activeMenuConversation)
 
-const fnActiveMenu = () => storeLayout.fnActiveMenu()
+const fnActiveMenuConversation = () => storeLayout.fnActiveMenuConversation()
 
 </script>
 <template>
-  <div class="btn-menu" @click="fnActiveMenu">
-    <i v-if="!activeMenu" class='bx bx-chevron-right'></i>
-    <i v-if="activeMenu" class='bx bx-chevron-left' ></i>
+  <div class="btn-conversatio" @click="fnActiveMenuConversation">
+    <i class='bx bxs-conversation'></i>
   </div>
 </template>
 
 <style>
-.btn-menu {
+.btn-conversatio {
   position: absolute;
   z-index: 10000;
-  top: 50%;
-  left: 0;
+  top: 30%;
+  right: 0;
 
   background-color: rgba(33,33,33,0.4);
   color: var(--white);
@@ -33,19 +32,19 @@ const fnActiveMenu = () => storeLayout.fnActiveMenu()
   width: 20px;
   height: 50px;
 
-  border-radius: 0 12px 12px 0;
+  border-radius: 12px 0 0 12px;
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 1.4rem;
   transition: all ease 2s;
   transform: translateY(-50%);
 }
 
-.btn-menu:hover {
+.btn-conversatio:hover {
   transition: border ease .4s;
   border-right: solid 2px var(--dark);
 }
 
-.btn-menu:active {
+.btn-conversatio:active {
   scale: .95;
 }
 </style>

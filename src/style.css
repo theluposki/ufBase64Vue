@@ -20,6 +20,7 @@
   --dark: hsl(0, 0%, 14.1%);
   --dark2: hsl(0, 0%, 16.3%);
   --blue-l: hsl(189.1, 85.7%, 69.8%);
+  --green: hsl(163.3,100%,45.7%);
 
   font-size: 65.2%;
   color: var(--dark);

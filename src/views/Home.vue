@@ -45,7 +45,7 @@ function onTouchMove(event) {
   </div>
 </template>
 
-<style>
+<style scoped>
 span {
   width: 100px;
   height: 100px;
