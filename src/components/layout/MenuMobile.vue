@@ -14,7 +14,7 @@ const pathname = computed(() => currentRoute.value.fullPath);
 
 const setLink = (link) => {
   push(link);
-  //storeLayout.fnActiveMenu()
+  storeLayout.fnActiveMenu()
 }
 
 
@@ -29,10 +29,12 @@ const setLink = (link) => {
     
     <ul class="nav">
       <li @click="setLink('/')" :class="pathname === '/' ? 'nav-link active' :'nav-link'">
-        Home
+        <i class='bx bxs-dashboard' ></i>
+        <span>Feed</span>
       </li>
       <li @click="setLink('/about')" :class="pathname === '/about' ? 'nav-link active' :'nav-link'">
-        About
+        <i class='bx bx-info-square' ></i>
+        <span>Sobre</span>
       </li>
     </ul>
   </div>
@@ -93,6 +95,7 @@ const setLink = (link) => {
   cursor: pointer;
   border: solid 6px transparent;
   border-radius: 8px;
+  user-select: none;
 }
 
 .nav-link:hover {

@@ -32,7 +32,14 @@ import BtnConversation from './BtnConversation.vue'
       <MenuConversation v-if="activeMenuConversation"/>
     </transition>
     
-    <router-view></router-view>
+    <router-view v-slot="{ Component }">
+      <transition 
+        enter-active-class="animate__animated animate__slideInLeft"
+        leave-active-class="animate__animated animate__slideOutLeft"
+        mode="out-in">
+        <component :is="Component" />
+      </transition>
+    </router-view>
   </div>
 </template>
 
