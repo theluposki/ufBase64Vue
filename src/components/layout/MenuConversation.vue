@@ -17,7 +17,21 @@ const fnActiveMenuConversation = () => storeLayout.fnActiveMenuConversation()
     <div class="search-conversation">
       <input type="text" class="input" placeholder="Pesquisar">
     </div>
+
+    <div class="btnsOptions">
+      <div class="btnOPT">
+        <i class='bx bxs-contact'></i>
+      </div>
+      <div class="btnOPT">
+        <i class='bx bxs-group' ></i>
+      </div>
+      <div class="btnOPT">
+        <i class='bx bxs-conversation' ></i>
+      </div>
+    </div>
     
+    <p class="title">Conversas</p>
+
     <ul class="conversations">
       <li class="c-item">
         <img class="picture" src="https://i.pravatar.cc/150?img=38" alt="friend picture" />
@@ -104,7 +118,7 @@ const fnActiveMenuConversation = () => storeLayout.fnActiveMenuConversation()
 .input {
   width: 100%;
   min-height: 40px;
-  padding: 0px;
+  padding: 0 4px;
   caret-color: var(--blue-l);
   color: var(--white);
   font-size: 1.6rem;
@@ -118,6 +132,55 @@ const fnActiveMenuConversation = () => storeLayout.fnActiveMenuConversation()
   border-bottom: solid 1px var(--blue-l);
 }
 
+.title {
+  color: #555;
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  border-top: solid 1px #555;
+}
+
+.btnsOptions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+
+  min-height: 40px;
+  max-height: 40px;
+  overflow: hidden;
+}
+
+.btnOPT {
+  min-width: 40px;
+  max-width: 40px;
+  min-height: 40px;
+  max-height: 40px;
+
+  background-color: var(--dark2);
+  border-radius: 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 1px transparent;
+
+  cursor: pointer;
+}
+
+.btnOPT:hover {
+  transition: all ease .4s;
+  border: solid 1px #555;
+  color: var(--blue-l);
+}
+
+.btnOPT:active {
+  animation: pulse;
+  animation-duration: .1s; 
+}
+
 
 .conversations {
   width: 100%;
@@ -127,6 +190,7 @@ const fnActiveMenuConversation = () => storeLayout.fnActiveMenuConversation()
   display: flex;
   flex-direction: column;
   gap: 6px;
+  margin-left: 6px;
 }
 .c-item {
   position: relative;
@@ -140,8 +204,15 @@ const fnActiveMenuConversation = () => storeLayout.fnActiveMenuConversation()
   cursor: pointer;
 }
 
+.c-item:hover {
+  transition: all ease .4s;
+  animation: pulse;
+  animation-duration: .15s;
+}
+
 .c-item:active {
-  scale: .95;
+  animation: headShake;
+  animation-duration: .08s; 
 }
 .picture {
   width: 50px;
@@ -167,13 +238,18 @@ const fnActiveMenuConversation = () => storeLayout.fnActiveMenuConversation()
 }
 
 .lastMessage {
-  font-size: .8rem;
-  color: #555;
+  width: 11ch;
+  max-height: 12px;
+  overflow: hidden;
+  font-size: 1rem;
+  font-weight: 100;
+  color: #989;
   line-height: 1;
 }
 
 .time {
-  font-size: 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 100;
   padding: 12px;
   
   display: flex;
@@ -181,6 +257,7 @@ const fnActiveMenuConversation = () => storeLayout.fnActiveMenuConversation()
   min-height: 50px;
   
   border-radius: 0 12px 12px 0;
+  color: var(--blue-l);
 }
 
 .online {
