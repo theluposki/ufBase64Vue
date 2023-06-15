@@ -136,6 +136,12 @@ const fnActiveMenuConversation = () => storeLayout.fnActiveMenuConversation()
   background-color: var(--dark2);
   border-radius: 25px 12px 12px 25px;
   max-height: 50px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.c-item:active {
+  scale: .95;
 }
 .picture {
   width: 50px;

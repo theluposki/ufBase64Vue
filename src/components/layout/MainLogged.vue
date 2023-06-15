@@ -34,8 +34,8 @@ import BtnConversation from './BtnConversation.vue'
     
     <router-view v-slot="{ Component }">
       <transition 
-        enter-active-class="animate__animated animate__slideInLeft"
-        leave-active-class="animate__animated animate__slideOutLeft"
+        enter-active-class="animate__animated animate__fadeIn"
+        leave-active-class="animate__animated animate__fadeOut"
         mode="out-in">
         <component :is="Component" />
       </transition>
@@ -55,6 +55,12 @@ import BtnConversation from './BtnConversation.vue'
   --animate-duration: 0.5s;
 }
 .animate__animated.animate__slideOutRight {
+  --animate-duration: 0.5s;
+}
+.animate__animated.animate__fadeIn {
+  --animate-duration: 0.5s;
+}
+.animate__animated.animate__fadeOut{
   --animate-duration: 0.5s;
 }
 .main {
