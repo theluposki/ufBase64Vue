@@ -24,7 +24,7 @@ export default defineConfig({
       manifest: {
         name: "MyReb | technology",
         short_name: "MyReb",
-        start_url: "https://theluposki.github.io/ufBase64Vue/index.html",
+        start_url: "/",
         display: "fullscreen",
         background_color: "#212121",
         lang: "pt-br",
