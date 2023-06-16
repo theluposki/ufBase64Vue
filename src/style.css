@@ -1,5 +1,6 @@
 @import url("https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap');
 
 *,
 *::before,
@@ -10,7 +11,7 @@
 }
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -79,6 +80,7 @@ body {
   overflow-y: auto;
   background-color: var(--white);
   color: var(--dark);
+  padding: 12px;
 }
 
 .page-int {

@@ -82,8 +82,9 @@ const fnActiveMenuConversation = () => storeLayout.fnActiveMenuConversation()
   color: var(--white);
 
   width: 200px;
-  height: calc(100vh - 78px);
   padding: 12px;
+  height: calc(100vh - 78px);
+  overflow: hidden;
 }
 
 .btn-closed {
@@ -185,6 +186,8 @@ const fnActiveMenuConversation = () => storeLayout.fnActiveMenuConversation()
 .conversations {
   width: 100%;
   height: calc(100vh - 148px);
+  overflow-x: hidden;
+  overflow-y: auto;
   padding: 12px 0;
   
   display: flex;

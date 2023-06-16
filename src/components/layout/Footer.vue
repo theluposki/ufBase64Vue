@@ -1,7 +1,7 @@
 <script setup></script>
 <template>
   <div class="footer">
-    footer
+    v1.0.0 - beta
   </div>
 </template>
 
@@ -14,7 +14,8 @@
 
   display: flex;
   align-items: center;
-  padding: 0 12px;
+  justify-content: flex-end;
+  padding: 0 24px;
 
   font-weight: 100;
   font-size: 1rem;
