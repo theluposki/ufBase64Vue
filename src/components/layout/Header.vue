@@ -5,6 +5,7 @@ import Logo from './Logo.vue'
 <template> 
   <div class="header">
     <Logo />
+    {{ 1+1 }}
   </div>
 </template>
 

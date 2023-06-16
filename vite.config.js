@@ -25,7 +25,7 @@ export default defineConfig({
         name: "MyReb | technology",
         short_name: "MyReb",
         start_url: "https://theluposki.github.io/ufBase64Vue/index.html",
-        display: "standalone",
+        display: "fullscreen",
         background_color: "#212121",
         lang: "pt-br",
         scope: "/",
