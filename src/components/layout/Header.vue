@@ -2,7 +2,7 @@
 import Logo from './Logo.vue'
 
 </script>
-<template>
+<template> 
   <div class="header">
     <Logo />
   </div>
