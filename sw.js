@@ -78,15 +78,28 @@ define(['./workbox-d188a458'], (function (workbox) { 'use strict';
    * See https://goo.gl/S9QRab
    */
   workbox.precacheAndRoute([{
-    "url": "registerSW.js",
-    "revision": "3ca0b8505b4bec776b69afdba2768812"
+    "url": "assets/index-52937b3b.js",
+    "revision": null
+  }, {
+    "url": "assets/index-ef44c646.css",
+    "revision": null
   }, {
     "url": "index.html",
-    "revision": "0.f4ftpn7k2h"
+    "revision": "5c616ff0545c589651a832cee1966bad"
+  }, {
+    "url": "registerSW.js",
+    "revision": "1872c500de691dce40960bb85481de07"
+  }, {
+    "url": "icons/logo-192-192.png",
+    "revision": "7c070f95a6c19bf4b8d4bbf62f904c37"
+  }, {
+    "url": "icons/logo-512-512.png",
+    "revision": "16373c79f0f4bca342ef0cf5539c30f4"
+  }, {
+    "url": "manifest.webmanifest",
+    "revision": "8d6b3ef8586864d1f8b534ed76585547"
   }], {});
   workbox.cleanupOutdatedCaches();
-  workbox.registerRoute(new workbox.NavigationRoute(workbox.createHandlerBoundToURL("index.html"), {
-    allowlist: [/^\/$/]
-  }));
+  workbox.registerRoute(new workbox.NavigationRoute(workbox.createHandlerBoundToURL("index.html")));
 
 }));
