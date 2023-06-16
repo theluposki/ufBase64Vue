@@ -199,10 +199,14 @@ const fnActiveMenuConversation = () => storeLayout.fnActiveMenuConversation()
   position: relative;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
+  padding: 0 4px;
   background-color: var(--dark2);
-  border-radius: 25px 12px 12px 25px;
+  border-radius: 25px 11px 11px 25px;
+
+  max-width: 179px;
   max-height: 50px;
+  
   user-select: none;
   cursor: pointer;
 }
@@ -218,8 +222,8 @@ const fnActiveMenuConversation = () => storeLayout.fnActiveMenuConversation()
   animation-duration: .08s; 
 }
 .picture {
-  width: 50px;
-  height: 50px;
+  width: 46px;
+  height: 46px;
   object-fit: cover;
   
   border-radius: 50%;
@@ -245,28 +249,32 @@ const fnActiveMenuConversation = () => storeLayout.fnActiveMenuConversation()
   max-height: 12px;
   overflow: hidden;
   font-size: 1rem;
-  font-weight: 100;
-  color: #989;
+  font-weight: 200;
+  color: var(--blue-l);
   line-height: 1;
 }
 
 .time {
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 100;
-  padding: 12px;
+  padding: 12px 4px;
   
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+
   min-height: 50px;
-  
-  border-radius: 0 12px 12px 0;
+  /* background-color: red; */
+  border-radius: 0 16px 16px 0;
   color: var(--blue-l);
 }
 
 .online {
   position: absolute;
-  bottom: -1px;
-  left: -1px;
+  bottom: 1px;
+  left: 1.5px;
   
   min-width: 15px;
   max-width: 15px;
@@ -282,7 +290,7 @@ const fnActiveMenuConversation = () => storeLayout.fnActiveMenuConversation()
 .offline {
   position: absolute;
   bottom: -1px;
-  left: -1px;
+  left: 1.5px;
   
   min-width: 15px;
   max-width: 15px;
