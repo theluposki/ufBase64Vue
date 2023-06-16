@@ -78,10 +78,10 @@ define(['./workbox-d188a458'], (function (workbox) { 'use strict';
    * See https://goo.gl/S9QRab
    */
   workbox.precacheAndRoute([{
-    "url": "assets/index-40fdc546.js",
+    "url": "assets/index-52937b3b.js",
     "revision": null
   }, {
-    "url": "assets/index-935493c7.css",
+    "url": "assets/index-ef44c646.css",
     "revision": null
   }, {
     "url": "assets/logo-a6732418.svg",
@@ -97,13 +97,10 @@ define(['./workbox-d188a458'], (function (workbox) { 'use strict';
     "revision": "747cac1bea453c976faf9ae1e2aee30f"
   }, {
     "url": "index.html",
-    "revision": "a21a49875905ee399d15ae98e2ab8331"
+    "revision": "5c616ff0545c589651a832cee1966bad"
   }, {
     "url": "registerSW.js",
     "revision": "1872c500de691dce40960bb85481de07"
-  }, {
-    "url": "vite.svg",
-    "revision": "8e3a10e157f75ada21ab742c022d5430"
   }, {
     "url": "icons/logo-192-192.png",
     "revision": "7c070f95a6c19bf4b8d4bbf62f904c37"
@@ -112,7 +109,7 @@ define(['./workbox-d188a458'], (function (workbox) { 'use strict';
     "revision": "16373c79f0f4bca342ef0cf5539c30f4"
   }, {
     "url": "manifest.webmanifest",
-    "revision": "be07ba8296384a252cb43e4d2ce2cb7d"
+    "revision": "8d6b3ef8586864d1f8b534ed76585547"
   }], {});
   workbox.cleanupOutdatedCaches();
   workbox.registerRoute(new workbox.NavigationRoute(workbox.createHandlerBoundToURL("index.html")));
