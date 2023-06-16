@@ -13,14 +13,14 @@ export default defineConfig({
     vue(),
     VitePWA({
       registerType: "autoUpdate",
-      devOptions: {
-        enabled: true,
-      },
-      workbox: {
-        globPatterns: ["**/*.{js,css,html,ico,png,svg}"],
-      },
+      // devOptions: {
+      //   enabled: true,
+      // },
+      // workbox: {
+      //   globPatterns: ["**/*.{js,css,html,ico,png,svg}"],
+      // },
       mode: "generateSW",
-      includeAssets: ["logo.svg"],
+      // includeAssets: ["logo.svg"],
       manifest: {
         name: "MyReb | technology",
         short_name: "MyReb",
