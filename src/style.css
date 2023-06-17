@@ -18,14 +18,17 @@
   --white: hsl(0, 0%, 100%);
   --white2: hsl(0, 0%, 87.5%);
 
+  --darkness: hsl(0,0%,9.6%);
   --dark: hsl(0, 0%, 14.1%);
   --dark2: hsl(0, 0%, 16.3%);
+  --dark3: hsl(0,0%,22.9%);
+
   --blue-l: hsl(189.1, 85.7%, 69.8%);
   --green: hsl(163.3,100%,45.7%);
 
   font-size: 65.2%;
   color: var(--dark);
-  background-color: var(--white2);
+  background-color: var(--darkness);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -46,12 +49,12 @@ body {
 #app {
   position: relative;
   width: 100%;
-  max-width: 1048px;
+  max-width: 600px;
   min-height: 100vh;
 
   margin: 0 auto;
   padding: 0;
-  background-color: var(--white);
+  background-color: var(--dark3);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -78,8 +81,8 @@ body {
   max-height: calc(100vh - 74.4px);
   overflow-x: hidden;
   overflow-y: auto;
-  background-color: var(--white);
-  color: var(--dark);
+  background-color: var(--dark3);
+  color: var(--white);
   padding: 12px;
 }
 

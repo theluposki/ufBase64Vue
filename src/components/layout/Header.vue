@@ -1,10 +1,12 @@
 <script setup>
 import Logo from './Logo.vue'
+import LoggedInUser from './loggedInUser.vue'
 
 </script>
 <template> 
   <div class="header">
     <Logo />
+    <LoggedInUser />
   </div>
 </template>
 
@@ -17,7 +19,8 @@ import Logo from './Logo.vue'
 
   display: flex;
   align-items: center;
-  padding: 0 12px;
+  justify-content: space-between;
+  padding: 0 24px;
 
   font-weight: 700;
 }
