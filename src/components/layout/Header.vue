@@ -1,12 +1,21 @@
 <script setup>
 import Logo from './Logo.vue'
 import LoggedInUser from './loggedInUser.vue'
+import BtnsLogin from './BtnsLogin.vue'
+
+import { computed } from 'vue';
+import { useUserStore } from '../../stores/user.js';
+
+const storeUser = useUserStore()
+
+const user = computed(() => storeUser.user)
 
 </script>
 <template> 
   <div class="header">
     <Logo />
-    <LoggedInUser />
+    <LoggedInUser v-if="user.nickname"/>
+    <BtnsLogin v-if="!user.nickname" />
   </div>
 </template>
 

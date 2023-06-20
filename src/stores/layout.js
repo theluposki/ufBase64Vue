@@ -5,16 +5,19 @@ export const useLayoutStore = defineStore('layout', () => {
   const activeMenu = ref(false)
   const activeMenuConversation = ref(false)
   const activeMenuLoggedInUser = ref(false)
+  const activeContainerLogin = ref(false)
 
   function fnActiveMenu () {
     if(activeMenu.value) {
       activeMenu.value = false
       activeMenuConversation.value = false
       activeMenuLoggedInUser.value = false
+      activeContainerLogin.value = false
     } else {
       activeMenu.value = true
       activeMenuConversation.value = false
       activeMenuLoggedInUser.value = false
+      activeContainerLogin.value = false
     }
   }
   
@@ -23,10 +26,12 @@ export const useLayoutStore = defineStore('layout', () => {
       activeMenuConversation.value = false
       activeMenuLoggedInUser.value = false
       activeMenu.value = false
+      activeContainerLogin.value = false
     } else {
       activeMenuConversation.value = true
       activeMenu.value = false
       activeMenuLoggedInUser.value = false
+      activeContainerLogin.value = false
     }
   }
 
@@ -35,10 +40,26 @@ export const useLayoutStore = defineStore('layout', () => {
       activeMenuLoggedInUser.value = false
       activeMenuConversation.value = false
       activeMenu.value = false
+      activeContainerLogin.value = false
     } else {
       activeMenuLoggedInUser.value = true
       activeMenuConversation.value = false
       activeMenu.value = false
+      activeContainerLogin.value = false
+    }
+  }
+
+  function fnActiveContainerLogin () {
+    if(activeContainerLogin.value) {
+      activeMenuLoggedInUser.value = false
+      activeMenuConversation.value = false
+      activeMenu.value = false
+      activeContainerLogin.value = false
+    } else {
+      activeMenuLoggedInUser.value = false
+      activeMenuConversation.value = false
+      activeMenu.value = false
+      activeContainerLogin.value = true
     }
   }
 
@@ -48,6 +69,8 @@ export const useLayoutStore = defineStore('layout', () => {
     fnActiveMenuConversation, 
     activeMenuConversation,
     fnActiveMenuLoggedInUser,
-    activeMenuLoggedInUser
+    activeMenuLoggedInUser,
+    fnActiveContainerLogin,
+    activeContainerLogin
   }
 })

@@ -16,7 +16,7 @@ const fnActiveMenu = () => storeLayout.fnActiveMenu()
   </div>
 </template>
 
-<style>
+<style scoped>
 .btn-menu {
   position: absolute;
   z-index: 10000;

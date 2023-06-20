@@ -12,6 +12,13 @@ const user = computed(() => storeUser.user)
 <template> 
   <div v-if="user.picture" class="menuLoggedInUser">
     <img :src="user.picture" class="picture" alt="image profile">
+    <p class="title">{{ user.nickname }}</p>
+    <ul class="myLinks">
+      <li class="ml-item" v-for="(item, index) in user.links" :key="index">
+        {{ item }}
+      </li>
+    </ul>
+    <p class="bio">{{ user.bio }}</p>
   </div>
 </template>
 

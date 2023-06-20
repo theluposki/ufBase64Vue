@@ -31,7 +31,7 @@ import BtnConversation from './BtnConversation.vue'
       mode="out-in">
       <MenuConversation v-if="activeMenuConversation"/>
     </transition>
-    
+
     <router-view v-slot="{ Component }">
       <transition 
         enter-active-class="animate__animated animate__fadeIn"
